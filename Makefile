@@ -1,4 +1,4 @@
-.PHONY: dev install
+.PHONY: dev install server
 
 dev:
 	denon run --allow-net server.tsx
@@ -10,3 +10,6 @@ install:
 	deno install --allow-read https://deno.land/x/opine@0.4.0/mod.ts;\
 	deno install --allow-read https://deno.land/x/opine@0.4.0/src/types.ts;\
 	deno install --allow-read https://deno.land/x/opine@0.4.0/mod.ts;\
+
+server:
+	deno run --allow-net server.tsx
