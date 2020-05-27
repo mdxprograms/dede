@@ -14,13 +14,17 @@ declare global {
 const App = () => {
   const [count, setCount] = (React as any).useState(0);
 
+  const add = () => setCount(count + 1);
+
+  const subtract = () => setCount(count - 1);
+
   const reset = () => setCount(0);
 
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Add</button>
-      <button onClick={() => setCount(count - 1)}>Subtract</button>
+      <button onClick={add}>Add</button>
+      <button onClick={subtract}>Subtract</button>
       <button onClick={reset}>Reset</button>
     </div>
   );
